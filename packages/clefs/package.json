@@ -1,6 +1,6 @@
 {
   "name": "clefs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An isomorphic file system abstraction with layers",
   "main": "index.js",
   "scripts": {
