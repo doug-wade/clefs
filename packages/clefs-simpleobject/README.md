@@ -3,6 +3,7 @@
 A [clefs](https://npmjs.com/package/clefs) layer backed by
 [localstorage-fs](https://npmjs.com/package/localstorage-fs).
 
+![Clefs logo](http://doug-wade.github.io/clefs/img/logo.svg)
 
 # Getting started
 
