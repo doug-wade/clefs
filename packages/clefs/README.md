@@ -44,6 +44,8 @@ console.log(fileContents);
 1. [clefs-dropbox](https://www.npmjs.com/package/dropbox)
 1. [clefs-drive](https://www.npmjs.com/package/google-drive)
 1. [clefs-box](https://www.npmjs.com/package/nodejs-box)
+1. Browser tests
+1. Support the full fs api
 
 
 # Why clefs?

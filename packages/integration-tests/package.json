@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/doug-wade/iso-fs.git"
+    "url": "git+ssh://git@github.com/doug-wade/clefs.git"
   },
   "keywords": [
     "fs",
