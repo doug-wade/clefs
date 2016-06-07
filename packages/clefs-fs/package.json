@@ -1,6 +1,6 @@
 {
   "name": "clefs-fs",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "An clefs layer backed by a node's fs module",
   "main": "index.js",
   "scripts": {
