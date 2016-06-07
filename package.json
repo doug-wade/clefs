@@ -1,0 +1,30 @@
+{
+  "name": "iso-fs",
+  "private": true,
+  "description": "An isomorphic file system abstraction with layers",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna run clean",
+    "test": "lerna run test",
+    "compile": "lerna run compile",
+    "nuke": "lerna run nuke"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/doug-wade/iso-fs.git"
+  },
+  "keywords": [
+    "fs",
+    "isomorphic",
+    "layers"
+  ],
+  "author": "Doug Wade <douglas.wade@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doug-wade/iso-fs/issues"
+  },
+  "homepage": "https://github.com/doug-wade/iso-fs#readme",
+  "devDependencies": {
+    "lerna": "2.0.0-beta.14"
+  }
+}

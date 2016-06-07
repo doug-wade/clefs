@@ -1,0 +1,29 @@
+{
+  "name": "integration-tests",
+  "version": "0.0.0",
+  "description": "integration tests for clefs",
+  "main": "index.js",
+  "scripts": {
+    "clean": "del-cli npm-debug.log*",
+    "test": "ava test.js",
+    "nuke": "del-cli node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/doug-wade/iso-fs.git"
+  },
+  "keywords": [
+    "fs",
+    "isomorphic",
+    "layers"
+  ],
+  "author": "Doug Wade <douglas.wade@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doug-wade/iso-fs/issues"
+  },
+  "homepage": "https://github.com/doug-wade/iso-fs#readme",
+  "devDependencies": {
+    "ava": "^0.15.2"
+  }
+}
