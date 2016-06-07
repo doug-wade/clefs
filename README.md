@@ -1,6 +1,6 @@
 # clefs
 
-![clefs logo](/img/logo.svg)
+![clefs logo](img/logo.svg)
 
 A pluggable isomorphic file system abstraction
 
