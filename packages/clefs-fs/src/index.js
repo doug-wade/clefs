@@ -20,5 +20,6 @@ module.exports = {
 				resolve();
 			});
 		});
-	}
+	},
+	name: 'fs'
 };

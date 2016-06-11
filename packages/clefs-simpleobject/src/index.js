@@ -15,5 +15,6 @@ module.exports = {
 				reject(new Error(`file not found ${file}`));
 			}
 		});
-	}
+	},
+	name: 'simpleobject'
 };

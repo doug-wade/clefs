@@ -1,9 +1,9 @@
 {
-  "name": "iso-fs",
+  "name": "clefs",
   "private": true,
   "description": "An isomorphic file system abstraction with layers",
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "npm i; lerna bootstrap",
     "clean": "lerna run clean",
     "test": "lerna run test",
     "compile": "lerna run compile",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/doug-wade/iso-fs.git"
+    "url": "git+ssh://git@github.com/doug-wade/clefs.git"
   },
   "keywords": [
     "fs",
@@ -21,9 +21,9 @@
   "author": "Doug Wade <douglas.wade@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/doug-wade/iso-fs/issues"
+    "url": "https://github.com/doug-wade/clefs/issues"
   },
-  "homepage": "https://github.com/doug-wade/iso-fs#readme",
+  "homepage": "https://github.com/doug-wade/clefs#readme",
   "devDependencies": {
     "lerna": "2.0.0-beta.14"
   }

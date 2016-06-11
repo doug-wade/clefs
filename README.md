@@ -1,5 +1,7 @@
 # clefs
 
+![Travis badge](https://travis-ci.org/doug-wade/clefs.svg?branch=master)
+
 ![Clefs logo](http://doug-wade.github.io/clefs/img/logo.svg)
 
 A pluggable isomorphic file system abstraction
