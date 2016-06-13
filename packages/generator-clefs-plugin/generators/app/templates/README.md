@@ -16,6 +16,6 @@ A [clefs](https://npmjs.com/package/clefs) layer.
 		import clefs from 'clefs';
 		import <%= name %> from 'clefs-<%= name %>';
 
-		const fs = clefs([simpleobject]);
+		const fs = clefs([<%= name %>]);
 		const fileContents = await fs.readFile('/path/to/file.txt');
 		console.log(fileContents);
