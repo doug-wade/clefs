@@ -28,6 +28,7 @@
     "ava": "^0.15.2",
     "clefs": "0.0.4",
     "clefs-fs": "0.0.4",
+    "clefs-googledrive": "0.0.4",
     "clefs-simpleobject": "0.0.4",
     "del": "^2.2.0"
   }

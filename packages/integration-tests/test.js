@@ -2,13 +2,14 @@ import clefs from 'clefs';
 import path from 'path';
 import simpleobject from 'clefs-simpleobject';
 import clefsFs from 'clefs-fs';
-import {cleanupTmpDir, createTmpDir} from './utils.js'
+import googledrive from 'clefs-googledrive';
+import {cleanupTmpDir, createTmpDir} from './utils.js';
 import test from 'ava';
 import os from 'os';
 
 const tmpDir = os.tmpdir();
 let folder;
-let layers = [simpleobject, clefsFs];
+let layers = [simpleobject, clefsFs, googledrive];
 
 test.before(async () => {
 	folder = await createTmpDir();
@@ -46,7 +47,7 @@ test("Reads and writes files with all layers", async t => {
 	await fs.writeFile(testPath, expected);
 	const actual = await fs.readFile(testPath);
 
-	t.deepEqual(actual, [expected, expected]);
+	t.deepEqual(actual, expected);
 });
 
 test.after.always(async () => {
