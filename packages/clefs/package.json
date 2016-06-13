@@ -21,9 +21,9 @@
   "author": "Doug Wade <douglas.wade@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/doug-wade/iso-fs/issues"
+    "url": "https://github.com/doug-wade/clefs/issues"
   },
-  "homepage": "https://github.com/doug-wade/iso-fs#readme",
+  "homepage": "https://github.com/doug-wade/clefs#readme",
   "devDependencies": {
     "ava": "^0.15.2",
     "babel-cli": "^6.9.0",

@@ -1,4 +1,4 @@
-# Contributing to iso-fs
+# Contributing to clefs
 
 If you'd like to submit an issue, do it!  Don't be shy!
 
