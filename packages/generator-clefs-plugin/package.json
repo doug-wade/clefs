@@ -1,0 +1,48 @@
+{
+  "name": "generator-clefs-plugin",
+  "version": "0.0.0",
+  "description": "Generate a new clefs plugin",
+  "homepage": "http://github.com/doug-wade/clefs",
+  "author": {
+    "name": "Doug Wade",
+    "email": "doug@dougwade.io",
+    "url": "dougwade.io"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "google drive clefs plugin layer",
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.23.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.0"
+  },
+  "devDependencies": {
+    "del-cli": "^0.2.0",
+    "eslint": "^2.1.0",
+    "gulp": "^3.9.0",
+    "gulp-ava": "^0.12.0",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-xo": "^0.11.0",
+    "yeoman-assert": "^2.0.0",
+    "yeoman-test": "^1.0.0"
+  },
+  "repository": "https://github.com/doug-wade/clefs",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp",
+    "clean": "del-cli npm-debug.log*",
+    "compile": "echo \"yeoman generator isn't compiled\"",
+    "nuke": "del-cli node_modules"
+  },
+  "license": "MIT"
+}

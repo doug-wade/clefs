@@ -15,7 +15,12 @@ function getHandler(api, layers) {
 					if (layers.length === 1) {
 						return promises[0];
 					}
-					return Promise.all(promises);
+
+					if (name === 'readFile') {
+						return Promise.race(promises);
+					} else if (name === 'writeFile') {
+						return Promise.all(promises);
+					}
 				};
 			}
 		}
