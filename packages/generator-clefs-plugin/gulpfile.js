@@ -3,22 +3,28 @@ var path = require('path');
 var gulp = require('gulp');
 var ava = require('gulp-ava');
 var xo = require('gulp-xo');
-var nsp = require('gulp-nsp');
+var snyk = require('gulp-snyk');
 var plumber = require('gulp-plumber');
 var coveralls = require('gulp-coveralls');
+var cp = require('child_process');
+var gutil = require('gulp-util');
 
-gulp.task('static', function () {
+gulp.task('xo', function () {
 	return gulp.src('generators/app/index.js')
 							.pipe(xo({
 								esnext: true
 							}));
 });
 
-gulp.task('nsp', function (cb) {
-	nsp({package: path.resolve('package.json')}, cb);
+gulp.task('snyk-protect', function(cb) {
+	return snyk({command: 'protect'}, cb);
 });
 
-gulp.task('test', function (cb) {
+gulp.task('snyk-test', function (cb) {
+	return snyk({command: 'test'}, cb);
+});
+
+gulp.task('ava', function (cb) {
 	var avaErr;
 
 	gulp.src('test/**/*.js')
@@ -45,5 +51,7 @@ gulp.task('coveralls', ['test'], function () {
 							.pipe(coveralls());
 });
 
-gulp.task('prepublish', ['nsp']);
-gulp.task('default', ['static', 'test', 'coveralls']);
+gulp.task('test', ['xo', 'ava', 'coveralls', 'snyk-test']);
+gulp.task('prepublish', ['snyk-protect']);
+
+gulp.task('default', ['prepublish', 'test']);
