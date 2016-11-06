@@ -6,7 +6,6 @@ import helpers from 'yeoman-test';
 
 const files = [
 	'src/index.js',
-
 	'.babelrc',
 	'.gitignore',
 	'.npmignore',
@@ -28,10 +27,10 @@ testCases.forEach(testCase => {
 			.withPrompts(testCase)
 			.toPromise();
 
-		t.expect(files.length);
-		files.forEach(file => {
-			t.true(await exists(file, testDir));
-		});
+		t.plan(files.length);
+		for (let i = 0; i < files.length; i++) {
+			t.true(await exists(path.join(testDir, 'packages', 'clefs-test', files[i])));
+		}
 	});
 
 	test(`generator-react-server:app ${testCase.name} passes the test target`, async t => {
@@ -42,13 +41,13 @@ testCases.forEach(testCase => {
 			})
 			.withPrompts(testCases)
 			.toPromise();
-		await installDeps();
-		t.true(await runsSuccessfully('npm test', testDir));
+			const packagePath = path.join(testDir, 'packages', 'clefs-' + path.basename(testDir));
+		await installDeps(packagePath);
+		t.true(await runsSuccessfully('npm test', packagePath));
 	});
 });
 
-function exists(filename, dir) {
-	filename = path.join(dir, filename);
+function exists(filename) {
 	return new Promise((resolve) => {
 		fs.access(filename, fs.F_OK, (err) => {
 			resolve(!err);
@@ -66,9 +65,11 @@ function runsSuccessfully(command, dir) {
 	});
 }
 
-function installDeps() {
+function installDeps(dir) {
 	return new Promise((resolve, reject) => {
-		cp.exec('npm install', (error) => {
+		cp.exec('npm install', {
+			cwd: dir
+		}, (error) => {
 			if (error) {
 				reject(error);
 			} else {

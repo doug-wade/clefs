@@ -6,8 +6,6 @@ var xo = require('gulp-xo');
 var snyk = require('gulp-snyk');
 var plumber = require('gulp-plumber');
 var coveralls = require('gulp-coveralls');
-var cp = require('child_process');
-var gutil = require('gulp-util');
 
 gulp.task('xo', function () {
 	return gulp.src('generators/app/index.js')
@@ -16,7 +14,7 @@ gulp.task('xo', function () {
 							}));
 });
 
-gulp.task('snyk-protect', function(cb) {
+gulp.task('snyk-protect', function (cb) {
 	return snyk({command: 'protect'}, cb);
 });
 

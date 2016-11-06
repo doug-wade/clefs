@@ -30,7 +30,7 @@
     "gulp-eslint": "^2.0.0",
     "gulp-exclude-gitignore": "^1.0.0",
     "gulp-line-ending-corrector": "^1.0.1",
-    "gulp-snyk": "0.0.1",
+    "gulp-snyk": "0.0.2",
     "gulp-plumber": "^1.0.0",
     "gulp-xo": "^0.11.0",
     "yeoman-assert": "^2.0.0",
@@ -43,7 +43,7 @@
     "clean": "del-cli npm-debug.log*",
     "compile": "echo \"yeoman generator isn't compiled\"",
     "nuke": "del-cli node_modules",
-    "snyk-protect": "snyk protect"
+    "snyk-protect": "gulp snyk-protect"
   },
   "license": "MIT",
   "snyk": true
