@@ -3,22 +3,26 @@ var path = require('path');
 var gulp = require('gulp');
 var ava = require('gulp-ava');
 var xo = require('gulp-xo');
-var nsp = require('gulp-nsp');
+var snyk = require('gulp-snyk');
 var plumber = require('gulp-plumber');
-var coveralls = require('gulp-coveralls');
+var codecov = require('gulp-codecov');
 
-gulp.task('static', function () {
+gulp.task('xo', function () {
 	return gulp.src('generators/app/index.js')
 							.pipe(xo({
 								esnext: true
 							}));
 });
 
-gulp.task('nsp', function (cb) {
-	nsp({package: path.resolve('package.json')}, cb);
+gulp.task('snyk-protect', function (cb) {
+	return snyk({command: 'protect'}, cb);
 });
 
-gulp.task('test', function (cb) {
+gulp.task('snyk-test', function (cb) {
+	return snyk({command: 'test'}, cb);
+});
+
+gulp.task('ava', function (cb) {
 	var avaErr;
 
 	gulp.src('test/**/*.js')
@@ -36,14 +40,12 @@ gulp.task('watch', function () {
 	gulp.watch(['generators/**/*.js', 'test/**'], ['test']);
 });
 
-gulp.task('coveralls', ['test'], function () {
-	if (!process.env.CI) {
-		return;
-	}
-
-	return gulp.src(path.join(__dirname, 'coverage/lcov.info'))
-							.pipe(coveralls());
+gulp.task('coverage', function () {
+	gulp.src('./coverage/lcov.info')
+	    .pipe(codecov());
 });
 
-gulp.task('prepublish', ['nsp']);
-gulp.task('default', ['static', 'test', 'coveralls']);
+gulp.task('test', ['xo', 'ava', 'snyk-test']);
+gulp.task('prepublish', ['snyk-protect']);
+
+gulp.task('default', ['prepublish', 'test']);

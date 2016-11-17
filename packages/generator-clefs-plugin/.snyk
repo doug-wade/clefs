@@ -1,0 +1,22 @@
+version: v1.5.2
+ignore: {}
+patch:
+  'npm:minimatch:20160620':
+    - gulp-nsp > nsp > nodesecurity-npm-utils > silent-npm-registry-client > npm-registry-client > rimraf > glob > minimatch:
+        patched: '2016-11-04T21:06:38.317Z'
+    - gulp > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2016-11-04T21:06:38.317Z'
+    - gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2016-11-04T21:06:38.317Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2016-11-04T21:06:38.317Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2016-11-04T21:06:38.317Z'
+    - gulp-exclude-gitignore > gulp-ignore > gulp-match > minimatch:
+        patched: '2016-11-04T21:06:38.317Z'
+  'npm:moment:20161019':
+    - gulp-nsp > nsp > joi > moment:
+        patched: '2016-11-04T21:06:38.317Z'
+  'npm:tough-cookie:20160722':
+    - gulp-nsp > nsp > nodesecurity-npm-utils > silent-npm-registry-client > npm-registry-client > request > tough-cookie:
+        patched: '2016-11-04T21:06:38.317Z'

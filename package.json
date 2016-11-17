@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/doug-wade/clefs#readme",
   "devDependencies": {
-    "lerna": "2.0.0-beta.14"
+    "lerna": "2.0.0-beta.30"
   }
 }
