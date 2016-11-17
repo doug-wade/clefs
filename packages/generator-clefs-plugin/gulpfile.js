@@ -5,7 +5,7 @@ var ava = require('gulp-ava');
 var xo = require('gulp-xo');
 var snyk = require('gulp-snyk');
 var plumber = require('gulp-plumber');
-var coveralls = require('gulp-coveralls');
+var codecov = require('gulp-codecov');
 
 gulp.task('xo', function () {
 	return gulp.src('generators/app/index.js')
@@ -40,16 +40,12 @@ gulp.task('watch', function () {
 	gulp.watch(['generators/**/*.js', 'test/**'], ['test']);
 });
 
-gulp.task('coveralls', ['test'], function () {
-	if (!process.env.CI) {
-		return;
-	}
-
-	return gulp.src(path.join(__dirname, 'coverage/lcov.info'))
-							.pipe(coveralls());
+gulp.task('coverage', function () {
+	gulp.src('./coverage/lcov.info')
+	    .pipe(codecov());
 });
 
-gulp.task('test', ['xo', 'ava', 'coveralls', 'snyk-test']);
+gulp.task('test', ['xo', 'ava', 'snyk-test']);
 gulp.task('prepublish', ['snyk-protect']);
 
 gulp.task('default', ['prepublish', 'test']);
