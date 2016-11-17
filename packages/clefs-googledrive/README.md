@@ -16,6 +16,6 @@ A [clefs](https://npmjs.com/package/clefs) layer.
 		import clefs from 'clefs';
 		import googledrive from 'clefs-googledrive';
 
-		const fs = clefs([simpleobject]);
+		const fs = clefs([googledrive]);
 		const fileContents = await fs.readFile('/path/to/file.txt');
 		console.log(fileContents);

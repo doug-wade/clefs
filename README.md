@@ -10,17 +10,31 @@ A pluggable isomorphic file system abstraction
 
 ## Installing
 
+Install the pluggable file system manager
+
 ```shell
-npm i -S clefs localstorage-fs
+npm i -S clefs
 ```
+
+Then install as many layers as you'll need
+
+```shell
+npm i -S clefs-localstorage clefs-fs clefs-simpleobject
+```
+
+
+# Usage
 
 ## Node.js
 
 ```javascript
 import clefs from 'clefs';
 import clefsFs from 'clefs-fs';
+import clefsCache from 'clefs-simpleobject';
 
-const fs = clefs([clefsFs]);
+const fs = clefs([clefsCache, clefsFs]);
+const fileContents = await fs.readFile('/path/to/file.txt');
+console.log(fileContents);
 ```
 
 ## Browser
@@ -28,14 +42,9 @@ const fs = clefs([clefsFs]);
 ```javascript
 import clefs from 'clefs/browser';
 import localstorage from 'clefs-localstorage';
+import clefsCache from 'clefs-simpleobject';
 
-const fs = clefs([localstorage]);
-```
-
-
-# Usage
-
-```javascript
+const fs = clefs([clefsCache, localstorage]);
 const fileContents = await fs.readFile('/path/to/file.txt');
 console.log(fileContents);
 ```
@@ -57,9 +66,9 @@ console.log(fileContents);
 
 # Sure, but why would _I_ use clefs?
 
-Write through from a local file system or local storage to a cloud file storage
-provider.  Has a pleasant promise-based interface that works nicely with async
-and await.
+Write through from a cache to a local file system or browser local storage
+and to a cloud file storage provider with a single call.  Has a pleasant
+promise-based interface that works nicely with async and await.
 
 
 #### Special Thanks
