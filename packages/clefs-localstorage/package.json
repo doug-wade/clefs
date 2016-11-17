@@ -1,6 +1,6 @@
 {
   "name": "clefs-localstorage",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "A clefs layer backed by the localstorage-fs module",
   "main": "index.js",
   "scripts": {

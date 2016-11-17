@@ -1,6 +1,6 @@
 {
   "name": "generator-clefs-plugin",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Generate a new clefs plugin",
   "homepage": "http://github.com/doug-wade/clefs",
   "author": {
