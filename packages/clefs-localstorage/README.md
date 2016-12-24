@@ -8,14 +8,17 @@ A [clefs](https://npmjs.com/package/clefs) layer backed by
 
 ## Installing
 
-		npm i -S clefs clefs-localstorage
-
+```sh
+npm i -S clefs clefs-localstorage
+```
 
 ## Usage
 
-		import clefs from 'clefs/browser';
-		import localstorage from 'clefs-localstorage';
+```javascript
+import clefs from 'clefs/browser';
+import ClefsLocalStorage from 'clefs-localstorage';
 
-		const fs = clefs([localstorage]);
-		const fileContents = await fs.readFile('/path/to/file.txt');
-		console.log(fileContents);
+const fs = clefs([new ClefsLocalStorage()]);
+const fileContents = await fs.readFile('/path/to/file.txt');
+console.log(fileContents);
+```

@@ -1,12 +1,17 @@
 const fs = {};
 
-module.exports = {
+export default class ClefsGoogleDrive {
+	constructor() {
+		this.name = 'googledrive';
+	}
+
 	writeFile(file, data) {
-		return new Promise((resolve) => {
+		return new Promise(resolve => {
 			fs[file] = data;
 			resolve();
 		});
-	},
+	}
+
 	readFile(file) {
 		return new Promise((resolve, reject) => {
 			if (fs[file]) {
@@ -15,6 +20,5 @@ module.exports = {
 				reject(new Error(`file not found ${file}`));
 			}
 		});
-	},
-	name: 'googledrive'
-};
+	}
+}

@@ -9,14 +9,17 @@ A [clefs](https://npmjs.com/package/clefs) layer backed by
 
 ## Installing
 
-		npm i -S clefs clefs-simpleobject
-
+```sh
+npm i -S clefs clefs-simpleobject
+```
 
 ## Usage
 
-		import clefs from 'clefs/browser';
-		import simpleobject from 'clefs-simpleobject';
+```javascript
+import clefs from 'clefs/browser';
+import simpleobject from 'clefs-simpleobject';
 
-		const fs = clefs([simpleobject]);
-		const fileContents = await fs.readFile('/path/to/file.txt');
-		console.log(fileContents);
+const fs = clefs([simpleobject]);
+const fileContents = await fs.readFile('/path/to/file.txt');
+console.log(fileContents);
+```

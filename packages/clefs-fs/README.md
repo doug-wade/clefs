@@ -10,14 +10,17 @@ A [clefs](https://npmjs.com/package/clefs) layer backed by
 
 ## Installing
 
-		npm i -S clefs clefs-fs
-
+```sh
+npm i -S clefs clefs-fs
+```
 
 ## Usage
 
-		import clefs from 'clefs/browser';
-		import clefFs from 'clefs-fs';
+```javascript
+import clefs from 'clefs/browser';
+import ClefFs from 'clefs-fs';
 
-		const fs = clefs([clefFs]);
-		const fileContents = await fs.readFile('/path/to/file.txt');
-		console.log(fileContents);
+const fs = clefs([new ClefFs()]);
+const fileContents = await fs.readFile('/path/to/file.txt');
+console.log(fileContents);
+```

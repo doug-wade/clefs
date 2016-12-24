@@ -2,7 +2,7 @@
 language: node_js
 
 node_js:
- - "stable"
+ - 6
 
 env:
   - CXX=g++-4.8

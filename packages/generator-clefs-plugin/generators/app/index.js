@@ -18,7 +18,7 @@ module.exports = yeoman.Base.extend({
 			default: this.appname
 		}];
 
-		return _this.prompt(prompts).then((props) => {
+		return _this.prompt(prompts).then(props => {
 			if (props.name.startsWith('clefs-')) {
 				props.name = props.name.replace('clefs-', '');
 			}
@@ -38,7 +38,7 @@ module.exports = yeoman.Base.extend({
 			'README.md'
 		];
 
-		files.forEach((filename) => {
+		files.forEach(filename => {
 			_this.fs.copyTpl(
 				_this.templatePath(filename),
 				_this.destinationPath(path.join('packages', 'clefs-' + _this.props.name, filename)),
