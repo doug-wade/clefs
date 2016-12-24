@@ -8,14 +8,17 @@ A [clefs](https://npmjs.com/package/clefs) layer.
 
 ## Installing
 
-		npm i -S clefs clefs-googledrive
-
+```sh
+npm i -S clefs clefs-googledrive
+```
 
 ## Usage
 
-		import clefs from 'clefs';
-		import googledrive from 'clefs-googledrive';
+```javascript
+import clefs from 'clefs';
+import ClefsGoogleDrive from 'clefs-googledrive';
 
-		const fs = clefs([googledrive]);
-		const fileContents = await fs.readFile('/path/to/file.txt');
-		console.log(fileContents);
+const fs = clefs([new ClefsGoogledrive()]);
+const fileContents = await fs.readFile('/path/to/file.txt');
+console.log(fileContents);
+```

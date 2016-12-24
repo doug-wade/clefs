@@ -29,10 +29,11 @@ npm i -S clefs-localstorage clefs-fs clefs-simpleobject
 
 ```javascript
 import clefs from 'clefs';
-import clefsFs from 'clefs-fs';
-import clefsCache from 'clefs-simpleobject';
+import ClefsFs from 'clefs-fs';
+import ClefsSimpleObject from 'clefs-simpleobject';
+import ClefsGoogleDrive from 'clefs-googledrive';
 
-const fs = clefs([clefsCache, clefsFs]);
+const fs = clefs([new ClefsSimpleObject(), new ClefsFs(), new ClefsGoogleDrive()]);
 const fileContents = await fs.readFile('/path/to/file.txt');
 console.log(fileContents);
 ```
@@ -41,10 +42,11 @@ console.log(fileContents);
 
 ```javascript
 import clefs from 'clefs/browser';
-import localstorage from 'clefs-localstorage';
-import clefsCache from 'clefs-simpleobject';
+import ClefsLocalStorage from 'clefs-localstorage';
+import ClefsSimpleObject from 'clefs-simpleobject';
+import ClefsGoogleDrive from 'clefs-googledrive';
 
-const fs = clefs([clefsCache, localstorage]);
+const fs = clefs([new ClefsSimpleObject(), new ClefsLocalStorage(), new ClefsGoogleDrive()]);
 const fileContents = await fs.readFile('/path/to/file.txt');
 console.log(fileContents);
 ```

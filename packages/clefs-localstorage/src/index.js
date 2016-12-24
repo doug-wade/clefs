@@ -1,2 +1,11 @@
 import promisify from 'promisify-node';
-export default promisify('localstorage-fs');
+
+const lsfs = promisify('localstorage-fs');
+
+export default class ClefsLocalStorage {
+	constructor() {
+		this.name = 'localstorage';
+		this.writeFile = lsfs.writeFile;
+		this.readFile = lsfs.readFile;
+	}
+}

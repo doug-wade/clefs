@@ -1,20 +1,23 @@
-const fs = {};
+export default class ClefsSimpleObject {
+	constructor(fs) {
+		this.name = 'simpleobject';
+		this.fs = fs || {};
+	}
 
-module.exports = {
 	writeFile(file, data) {
-		return new Promise((resolve) => {
-			fs[file] = data;
+		return new Promise(resolve => {
+			this.fs[file] = data;
 			resolve();
 		});
-	},
+	}
+
 	readFile(file) {
 		return new Promise((resolve, reject) => {
-			if (fs[file]) {
-				resolve(fs[file]);
+			if (this.fs[file]) {
+				resolve(this.fs[file]);
 			} else {
 				reject(new Error(`file not found ${file}`));
 			}
 		});
-	},
-	name: 'simpleobject'
-};
+	}
+}
