@@ -1,0 +1,36 @@
+{
+  "name": "test-pages",
+  "version": "0.0.1",
+  "description": "clefs test pages",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build": "mkdir -p dist && cp static/index.html dist && webpack",
+    "start": "node --harmony index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doug-wade/clefs.git"
+  },
+  "keywords": [
+    "clefs"
+  ],
+  "author": "Douglas Wade <douglas.b.wade@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doug-wade/clefs/issues"
+  },
+  "homepage": "https://github.com/doug-wade/clefs#readme",
+  "dependencies": {
+    "clefs": "*",
+    "clefs-fs": "*",
+    "clefs-localstorage": "*",
+    "clefs-simpleobject": "*",
+    "json-loader": "^0.5.4",
+    "koa": "^2.0.0-alpha.7",
+    "koa-static": "^3.0.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-dropzone": "^3.8.0"
+  }
+}
