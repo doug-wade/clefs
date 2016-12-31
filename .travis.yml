@@ -1,19 +1,27 @@
----
 language: node_js
-
 node_js:
+<<<<<<< HEAD
  - 8
  - 10
 
+||||||| merged common ancestors
+ - 6
+
+=======
+- 6
+>>>>>>> Make google drive plugin use google drive
 env:
+  matrix:
   - CXX=g++-4.8
+  global:
+  - secure: y3VgPOkXMPXd0mfgFBFs9SHheW+fNWOOb2HhkgBbDMBxWM4mwGroOzrjZ01O4mrKhHPLavzlH+s7Ri3so0lN54xGGmQ/mR/uB/NeIuSiCmO8rsdVOE89EFhKt6ERAiRi1r1QJ0CDJqvi3fV7Efmm7Wkl5bfIT8MO9NEr/FDoMUXoFCOgvEfreuUP06EmgMwpHpio7hxNPERrE6PDMaE0FfiGsrq4bzwhN3nO9NhbCf/p6IfsbFFOKVSsmHI3rT1kf/DnrKljiW28mUukW1xDn235AivAZ6C9PP8W/q2lcO9bwmMhSLLJ0pYF0AR7y2cG8j6fok9xMax6mcemob69Rdg6rPslL6j5Wg0Wd/4A43wOmwhPMS+qTxftnec8rHcV2UuwzVJWh/85E3pVob7/aJPqPuva10tByaw5ZpJpKqiDAsA0zUoL9871lzK+XatMlByWcFgWg+StuNUSxb7iM2LbB8oL84YwMX+LvDWJJMhPUkx6WYpiT/t30BI/LPRkz9/x+/QbPHU5Yye4wl8zIuY3XwOGftkrUkm2SMO2ZpLjsfvBhnUB90BS9CJBTdskok58M1/ViWqdmy8hxhJ8810qM6k7aHrq7zDbaFgGC3bC6QvOrJYQFcW5oanGL4NnPi7866UPchwMOePAtVY7VALrYtr+nAlZ1aPz5VR+qSs=
+  - secure: ShyOzFGXBV8SqdtEA7OUCtw/pjpIVxmDo3aucpcwwYiFV65AQapHMhBe75s9mGORdV4l43QGOEGbVpbaS/cuwc4k+36vF043ebeZhQbDorJ/VJUk+pmYfur+irjJJwuEQWaKaI52T7TFfDegSQ45iwXBDIxHwBwx3kgKY73sN4wlXsl4qO6fw+FJGA2CBMpdtK78s0S1Vm9Cw0XrlfZaTsAqRji8hn5i5OibpHGjmZ2OyKqWwC/Ofkzpg0SZPWtt4uPlubKpC43VqcdI4Audbz1ZsHEx/fZ30cntT4C3rSyQn8wkhg5d40C57exHfApfo1E7QemNX36Ij8hDixK04owPbOCY8d+mjPSvtLzh358/SasYoM44sTGC/c1czFTBe2SsnQeI8wnKWizMR35HKqYjtpKSRPpKdIaJOjftfq0dgRn+MK1EWVQpU57nvNlNYnFuh1UpEW+sGaa+XiOc9EafYHBOvPmv8P6SazTOj4K4sjyzJGeq/bQdFkUFBc0rqhUmyv9zdXIuMNSHlmezgc4GGkBXKLcda3PQrDObSO6XH7us7t4hAoZJaDD1zKYbqL5REtzGti36V7Gxp+dnXgl2qfBBvm5s6Hp5HsTaD8w7SWSEvs1ljv9Znk8JcR7S48rOMZ6qg+p1SNDNeGX495OTjC1DHuatUStEeC+IC9k=
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test
+    - ubuntu-toolchain-r-test
     packages:
-      - g++-4.8
-
+    - g++-4.8
 before_script:
-  - npm run bootstrap
-  - npm run compile
+- npm run bootstrap
+- npm run compile
