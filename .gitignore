@@ -4,3 +4,6 @@ coverage
 lerna-debug.log
 npm-debug.log
 .README.md.swp
+client_secret.json
+secret.json
+*.out

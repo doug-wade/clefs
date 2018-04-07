@@ -22,7 +22,6 @@
     "yosay": "1.2.1"
   },
   "devDependencies": {
-    "del-cli": "^0.2.0",
     "eslint": "^3.12.2",
     "gulp": "^3.9.0",
     "gulp-ava": "^0.15.0",
@@ -33,7 +32,6 @@
     "gulp-plumber": "^1.0.0",
     "gulp-snyk": "0.0.3",
     "gulp-xo": "^0.14.0",
-    "nyc": "^10.0.0",
     "yeoman-assert": "^2.0.0",
     "yeoman-test": "^1.0.0"
   },

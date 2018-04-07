@@ -18,7 +18,8 @@ function getHandler(api, layers) {
 
 					if (name === 'readFile') {
 						return Promise.race(promises);
-					} else if (name === 'writeFile') {
+					}
+					if (name === 'writeFile') {
 						return Promise.all(promises);
 					}
 				};

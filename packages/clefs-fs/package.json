@@ -25,15 +25,6 @@
     "url": "https://github.com/doug-wade/clefs/issues"
   },
   "homepage": "https://github.com/doug-wade/clefs#readme",
-  "devDependencies": {
-    "ava": "^0.17.0",
-    "babel-cli": "^6.9.0",
-    "babel-preset-latest": "^6.9.0",
-    "babel-preset-stage-0": "^6.5.0",
-    "del-cli": "^0.2.0",
-    "snyk": "^1.14.3",
-    "xo": "^0.17.1"
-  },
   "dependencies": {
     "promisify-node": "0.4.0"
   }
