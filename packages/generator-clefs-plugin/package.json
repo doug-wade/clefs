@@ -38,7 +38,7 @@
   "repository": "https://github.com/doug-wade/clefs",
   "scripts": {
     "coverage": "nyc gulp ava && gulp coverage",
-    "prepublish": "gulp prepublish",
+    "prepublishOnly": "gulp prepublish",
     "test": "gulp test",
     "clean": "del-cli npm-debug.log*",
     "compile": "echo \"yeoman generator isn't compiled\"",

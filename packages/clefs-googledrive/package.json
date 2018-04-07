@@ -7,7 +7,7 @@
     "clean": "del-cli npm-debug.log* index.js",
     "test": "xo src/index.js && snyk test",
     "compile": "babel src/index.js --presets es2015,stage-0 -o index.js",
-    "prepublish": "npm run clean && npm run compile",
+    "prepare": "npm run clean && npm run compile",
     "nuke": "del-cli node_modules"
   },
   "repository": {
