@@ -1,5 +1,20 @@
-version: v1.5.2
-ignore: {}
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:brace-expansion:20170302':
+    - '*':
+        reason: None Given
+        expires: 2018-05-07T20:38:23.397Z
+  'npm:lodash:20180130':
+    - '*':
+        reason: None Given
+        expires: 2018-05-07T20:39:46.835Z
+  'npm:shelljs:20140723':
+    - '*':
+        reason: None Given
+        expires: 2018-05-07T20:40:17.839Z
+# patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:minimatch:20160620':
     - gulp-nsp > nsp > nodesecurity-npm-utils > silent-npm-registry-client > npm-registry-client > rimraf > glob > minimatch:

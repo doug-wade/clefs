@@ -1,11 +1,11 @@
 'use strict';
 const path = require('path');
-const yeoman = require('yeoman-generator');
+const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 
-module.exports = yeoman.Base.extend({
-	prompting: function () {
+module.exports = class ClefsGenerator extends Generator {
+	prompting() {
 		let _this = this;
 		_this.log(yosay(
 			'Welcome to the shining ' + chalk.green('clefs plugin') + ' generator!'
@@ -24,9 +24,9 @@ module.exports = yeoman.Base.extend({
 			}
 			_this.props = props;
 		});
-	},
+	}
 
-	writing: function () {
+	writing() {
 		let _this = this;
 
 		let files = [
@@ -45,9 +45,9 @@ module.exports = yeoman.Base.extend({
 				_this.props
 			);
 		});
-	},
+	}
 
-	install: function () {
+	install() {
 		this.npmInstall();
 	}
-});
+};
