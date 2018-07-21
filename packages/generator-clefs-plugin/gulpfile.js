@@ -15,11 +15,11 @@ gulp.task('xo', function () {
 });
 
 gulp.task('snyk-protect', function (cb) {
-	return snyk({command: 'protect'}, cb);
+	return snyk({command: 'protect', debug: true}, cb);
 });
 
 gulp.task('snyk-test', function (cb) {
-	return snyk({command: 'test'}, cb);
+	return snyk({command: 'test', debug: true}, cb);
 });
 
 gulp.task('ava', function (cb) {

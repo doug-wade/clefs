@@ -2,10 +2,6 @@
 version: v1.7.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
-  'npm:brace-expansion:20170302':
-    - '*':
-        reason: None Given
-        expires: 2018-05-07T20:38:23.397Z
   'npm:lodash:20180130':
     - '*':
         reason: None Given
