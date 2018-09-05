@@ -33,7 +33,7 @@
     "snyk": "^1.14.3",
     "xo": "^0.22.0",
     "babel-core": "^6.21.0",
-    "babel-loader": "^7.0.0",
+    "babel-loader": "^8.0.0",
     "babel-preset-react": "^6.16.0",
     "lerna": "^2.10.0",
     "webpack": "^4.6.0",
