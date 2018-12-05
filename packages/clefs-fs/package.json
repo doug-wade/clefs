@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/doug-wade/clefs#readme",
   "dependencies": {
-    "promisify-node": "0.4.0"
+    "promisify-node": "^0.5.0"
   }
 }

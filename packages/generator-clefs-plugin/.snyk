@@ -14,6 +14,83 @@ ignore:
     - '*':
         reason: None Given
         expires: 2018-05-07T20:40:17.839Z
+    - yeoman-generator > shelljs:
+        reason: Nothing else to be done
+        expires: '2019-01-04T05:58:33.542Z'
+  'npm:ms:20170412':
+    - yeoman-generator > yeoman-environment > globby > fast-glob > micromatch > snapdragon > debug > ms:
+        reason: None given
+        expires: '2019-01-04T06:04:17.712Z'
+    - yeoman-generator > mem-fs-editor > globby > fast-glob > micromatch > snapdragon > debug > ms:
+        reason: None given
+        expires: '2019-01-04T06:04:17.713Z'
+    - yeoman-generator > mem-fs-editor > globby > fast-glob > micromatch > nanomatch > snapdragon > debug > ms:
+        reason: None given
+        expires: '2019-01-04T06:04:17.713Z'
+    - yeoman-generator > mem-fs-editor > globby > fast-glob > micromatch > braces > snapdragon > debug > ms:
+        reason: None given
+        expires: '2019-01-04T06:04:17.713Z'
+    - yeoman-generator > mem-fs-editor > globby > fast-glob > micromatch > extglob > snapdragon > debug > ms:
+        reason: None given
+        expires: '2019-01-04T06:04:17.713Z'
+    - yeoman-generator > yeoman-environment > globby > fast-glob > micromatch > extglob > snapdragon > debug > ms:
+        reason: None given
+        expires: '2019-01-04T06:04:17.713Z'
+    - yeoman-generator > yeoman-environment > globby > fast-glob > micromatch > braces > snapdragon > debug > ms:
+        reason: None given
+        expires: '2019-01-04T06:04:17.713Z'
+    - yeoman-generator > yeoman-environment > globby > fast-glob > micromatch > nanomatch > snapdragon > debug > ms:
+        reason: None given
+        expires: '2019-01-04T06:04:17.713Z'
+    - yeoman-generator > mem-fs-editor > globby > fast-glob > micromatch > extglob > expand-brackets > debug > ms:
+        reason: None given
+        expires: '2019-01-04T06:04:17.713Z'
+    - yeoman-generator > yeoman-environment > globby > fast-glob > micromatch > extglob > expand-brackets > debug > ms:
+        reason: None given
+        expires: '2019-01-04T06:04:17.713Z'
+    - yeoman-generator > yeoman-environment > globby > fast-glob > micromatch > extglob > expand-brackets > snapdragon > debug > ms:
+        reason: None given
+        expires: '2019-01-04T06:04:17.713Z'
+    - yeoman-generator > mem-fs-editor > globby > fast-glob > micromatch > extglob > expand-brackets > snapdragon > debug > ms:
+        reason: None given
+        expires: '2019-01-04T06:04:17.713Z'
+  'npm:debug:20170905':
+    - yeoman-generator > yeoman-environment > globby > fast-glob > micromatch > snapdragon > debug:
+        reason: None given
+        expires: '2019-01-04T06:04:17.712Z'
+    - yeoman-generator > mem-fs-editor > globby > fast-glob > micromatch > nanomatch > snapdragon > debug:
+        reason: None given
+        expires: '2019-01-04T06:04:17.712Z'
+    - yeoman-generator > mem-fs-editor > globby > fast-glob > micromatch > braces > snapdragon > debug:
+        reason: None given
+        expires: '2019-01-04T06:04:17.712Z'
+    - yeoman-generator > mem-fs-editor > globby > fast-glob > micromatch > extglob > snapdragon > debug:
+        reason: None given
+        expires: '2019-01-04T06:04:17.712Z'
+    - yeoman-generator > yeoman-environment > globby > fast-glob > micromatch > extglob > snapdragon > debug:
+        reason: None given
+        expires: '2019-01-04T06:04:17.712Z'
+    - yeoman-generator > yeoman-environment > globby > fast-glob > micromatch > braces > snapdragon > debug:
+        reason: None given
+        expires: '2019-01-04T06:04:17.712Z'
+    - yeoman-generator > yeoman-environment > globby > fast-glob > micromatch > nanomatch > snapdragon > debug:
+        reason: None given
+        expires: '2019-01-04T06:04:17.712Z'
+    - yeoman-generator > mem-fs-editor > globby > fast-glob > micromatch > extglob > expand-brackets > debug:
+        reason: None given
+        expires: '2019-01-04T06:04:17.712Z'
+    - yeoman-generator > yeoman-environment > globby > fast-glob > micromatch > extglob > expand-brackets > debug:
+        reason: None given
+        expires: '2019-01-04T06:04:17.712Z'
+    - yeoman-generator > yeoman-environment > globby > fast-glob > micromatch > extglob > expand-brackets > snapdragon > debug:
+        reason: None given
+        expires: '2019-01-04T06:04:17.712Z'
+    - yeoman-generator > mem-fs-editor > globby > fast-glob > micromatch > extglob > expand-brackets > snapdragon > debug:
+        reason: None given
+        expires: '2019-01-04T06:04:17.712Z'
+    - yeoman-generator > mem-fs-editor > globby > fast-glob > micromatch > snapdragon > debug:
+        reason: None given
+        expires: '2019-01-04T06:04:17.713Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:minimatch:20160620':
