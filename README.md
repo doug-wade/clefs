@@ -27,6 +27,8 @@ npm i -S clefs-localstorage clefs-fs clefs-simpleobject
 
 ## Node.js
 
+USer clefs on the server!
+
 ```javascript
 import clefs from 'clefs';
 import clefsFs from 'clefs-fs';
@@ -38,6 +40,8 @@ console.log(fileContents);
 ```
 
 ## Browser
+
+Use clefs in the browser!
 
 ```javascript
 import clefs from 'clefs/browser';
