@@ -28,6 +28,17 @@
     "clefs": "0.0.1",
     "clefs-fs": "0.0.1",
     "clefs-googledrive": "0.0.1",
+<<<<<<< HEAD
     "clefs-simpleobject": "0.0.1"
+||||||| merged common ancestors
+    "clefs-simpleobject": "0.0.1",
+    "del": "^2.2.0"
+=======
+    "clefs-simpleobject": "0.0.1",
+    "del": "^2.2.0"
+  },
+  "dependencies": {
+    "google-auth-library": "^0.10.0"
+>>>>>>> Make google drive plugin use google drive
   }
 }

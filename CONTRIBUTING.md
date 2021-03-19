@@ -17,6 +17,17 @@ export from their `main` file an object with the following shape
 module.exports = {
 	writeFile(file, data) { return new Promise() },
 	readFile(file) { return new Promise() },
-	name: '$name'`
+	name: '$name'
 }
 ```
+
+# Running the integration tests locally
+
+You'll need to get access to the test google drive instance by providing the
+credentials as environment variables in the form
+
+```sh
+GDRIVE_CREDENTIALS='SECRET' GDRIVE_USER_CREDENTIALS='SECRET' npm test
+```
+
+[Contact me](mailto:douglas.b.wade@gmail.com) to get them.

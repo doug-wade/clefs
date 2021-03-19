@@ -6,13 +6,16 @@ import ClefsGoogleDrive from 'clefs-googledrive';
 import {cleanupTmpDir, createTmpDir} from './utils.js';
 import test from 'ava';
 import os from 'os';
+import gda from './google-drive-auth.js';
 
 const tmpDir = os.tmpdir();
 let folder;
-let layers = [new ClefsSimpleObject(), new ClefsFs(), new ClefsGoogleDrive()];
+let layers;
 
 test.before(async () => {
 	folder = await createTmpDir();
+	const gauth = await gda();
+	layers = [new ClefsSimpleObject(), new ClefsFs(), new ClefsGoogleDrive(gauth)];
 });
 
 test("Throws on unsupported method", async t => {
@@ -26,8 +29,9 @@ test("Throws on unsupported method", async t => {
 	}
 });
 
-layers.forEach(layer => {
-	test(`Reads and writes files with the ${layer.name} layer`, async t => {
+test(`Reads and writes files with each layer`, async t => {
+	t.plan(layers.length);
+	layers.forEach(async layer => {
 		const expected = '# Hello World';
 		const testPath = path.join(os.tmpdir(), 'tmp.md');
 		const fs = clefs([new ClefsSimpleObject()]);
@@ -37,7 +41,7 @@ layers.forEach(layer => {
 
 		t.deepEqual(actual, expected);
 	});
-})
+});
 
 test("Reads and writes files with all layers", async t => {
 	const expected = '# Hello World';
