@@ -20,11 +20,15 @@ function getHandler(api, layers) {
 					}
 
 					if (name === 'readFile') {
-						return Promise.race(promises);
+						return Promise.any(promises);
 					}
 
 					if (name === 'writeFile') {
 						return Promise.all(promises);
+					}
+
+					if (name === 'access') {
+						return Promise.any(promises);
 					}
 				};
 			}
@@ -33,5 +37,5 @@ function getHandler(api, layers) {
 }
 
 function getApiUnion() {
-	return new Set(['readFile', 'writeFile']);
+	return new Set(['access', 'readFile', 'writeFile']);
 }

@@ -5,6 +5,18 @@ export default class ClefsFs {
 		this.name = 'fs';
 	}
 
+	access(file) {
+		return new Promise((resolve, reject) => {
+			fs.access(file, error => {
+				if (error) {
+					return reject(error);
+				}
+
+				resolve();
+			});
+		});
+	}
+
 	readFile(file) {
 		return new Promise((resolve, reject) => {
 			fs.readFile(file, (error, data) => {

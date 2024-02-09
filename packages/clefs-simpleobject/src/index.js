@@ -20,4 +20,14 @@ export default class ClefsSimpleObject {
 			}
 		});
 	}
+
+	access(file) {
+		return new Promise((resolve, reject) => {
+			if (this.fs[file]) {
+				resolve();
+			} else {
+				reject(new Error(`file not found ${file}`));
+			}
+		});
+	}
 }

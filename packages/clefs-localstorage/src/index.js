@@ -21,4 +21,14 @@ export default class ClefsLocalStorage {
 			}
 		});
 	}
+
+	access(file) {
+		return new Promise((resolve, reject) => {
+			if (this.fs.getItem(file)) {
+				resolve();
+			} else {
+				reject(new Error(`file not found ${file}`));
+			}
+		});
+	}
 }
