@@ -1,10 +1,10 @@
-const fs = require('fs');
-const os = require('os');
-const path = require('path');
-const del = require('del');
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import del from 'del';
 
 // Testing utilities
-function createTmpDir() {
+export function createTmpDir() {
 	const randomId = generateRandomId();
 
 	return new Promise((resolve, reject) => {
@@ -19,7 +19,7 @@ function createTmpDir() {
 	});
 }
 
-function cleanupTmpDir(dir) {
+export function cleanupTmpDir(dir) {
 	// In case the cleanup regex matches more than one directory, clean up arrays.
 	let directories = [];
 	if (typeof dir === 'string') {
@@ -32,8 +32,6 @@ function cleanupTmpDir(dir) {
 	return Promise.all(promises);
 }
 
-function generateRandomId() {
+export function generateRandomId() {
 	return (Math.floor(Math.random() * 9999999) + 1000000).toString();
 }
-
-module.exports = {cleanupTmpDir, createTmpDir};

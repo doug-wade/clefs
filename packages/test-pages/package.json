@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "clefs test pages",
   "main": "index.js",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "mkdir -p dist && cp static/index.html dist && webpack",

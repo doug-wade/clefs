@@ -3,11 +3,12 @@
   "version": "0.0.1",
   "description": "An isomorphic file system abstraction with layers",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "clean": "del-cli *.log index.js",
     "lint": "xo src/index.js",
     "test": "ava test.js",
-    "build": "babel src/index.js --presets=@babel/env -o index.js",
+    "build": "babel src/index.js -o index.js",
     "prepare": "yarn run clean && yarn run build"
   },
   "repository": {

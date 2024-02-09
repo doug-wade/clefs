@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "description": "integration tests for clefs",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "clean": "del-cli *.log",
     "test": "ava test.js"

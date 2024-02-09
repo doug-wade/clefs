@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "description": "A clefs layer backed by the localstorage-fs module",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "clean": "del-cli *.log index.js",
     "lint": "xo src/index.js",
-    "build": "babel src/index.js --presets=@babel/env -o index.js",
+    "build": "babel src/index.js -o index.js",
     "prepare": "yarn clean && yarn build"
   },
   "repository": {

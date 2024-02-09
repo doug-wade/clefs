@@ -27,7 +27,7 @@
     "@babel/cli": "^7.23.9",
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
-    "ava": "^0.25.0",
+    "ava": "^6.1.1",
     "babel-loader": "^8.0.0",
     "del-cli": "^1.0.0",
     "nyc": "^13.1.0",
