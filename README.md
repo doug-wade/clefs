@@ -1,14 +1,12 @@
 # clefs
 
-![Travis badge](https://travis-ci.org/doug-wade/clefs.svg?branch=master)
-
 ![Clefs logo](http://doug-wade.github.io/clefs/img/logo.svg)
 
 A pluggable isomorphic file system abstraction
 
-# Getting started
+## Getting started
 
-## Installing
+### Installing
 
 Install the pluggable file system manager
 
@@ -22,12 +20,11 @@ Then install as many layers as you'll need
 npm i -S clefs-localstorage clefs-fs clefs-simpleobject
 ```
 
+## Usage
 
-# Usage
+### Node.js
 
-## Node.js
-
-USer clefs on the server!
+Use clefs on the server!
 
 ```javascript
 import clefs from 'clefs';
@@ -39,7 +36,7 @@ const fileContents = await fs.readFile('/path/to/file.txt');
 console.log(fileContents);
 ```
 
-## Browser
+### Browser
 
 Use clefs in the browser!
 
@@ -53,8 +50,7 @@ const fileContents = await fs.readFile('/path/to/file.txt');
 console.log(fileContents);
 ```
 
-
-# Roadmap
+## Roadmap
 
 1. [clefs-dropbox](https://www.npmjs.com/package/dropbox)
 1. [clefs-drive](https://www.npmjs.com/package/google-drive)
@@ -62,19 +58,17 @@ console.log(fileContents);
 1. Browser tests
 1. Support the full fs api
 
-
-# Why clefs?
+## Why clefs?
 
 [Clefs](https://en.wikipedia.org/wiki/Clef) have layers.
 
-
-# Sure, but why would _I_ use clefs?
+## Sure, but why would _I_ use clefs?
 
 Write through from a cache to a local file system or browser local storage
 and to a cloud file storage provider with a single call.  Has a pleasant
 promise-based interface that works nicely with async and await.
 
+## Special Thanks
 
-#### Special Thanks
 Special thanks to [jonadab](https://openclipart.org/detail/36835/bass-clef-01)
 for the creative commons licensed clef image.
