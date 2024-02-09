@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'node:fs';
 
 export default class ClefsFs {
 	constructor() {
@@ -7,10 +7,11 @@ export default class ClefsFs {
 
 	readFile(file) {
 		return new Promise((resolve, reject) => {
-			fs.readFile(file, (err, data) => {
-				if (err) {
-					return reject(err);
+			fs.readFile(file, (error, data) => {
+				if (error) {
+					return reject(error);
 				}
+
 				resolve(data.toString());
 			});
 		});
@@ -18,10 +19,11 @@ export default class ClefsFs {
 
 	writeFile(file, data) {
 		return new Promise((resolve, reject) => {
-			fs.writeFile(file, data, err => {
-				if (err) {
-					return reject(err);
+			fs.writeFile(file, data, error => {
+				if (error) {
+					return reject(error);
 				}
+
 				resolve();
 			});
 		});

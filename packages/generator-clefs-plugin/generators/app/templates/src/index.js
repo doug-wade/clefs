@@ -16,5 +16,5 @@ module.exports = {
 			}
 		});
 	},
-	name: '<%= name %>'
+	name: '<%= name %>',
 };

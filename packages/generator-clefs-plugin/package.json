@@ -3,43 +3,37 @@
   "version": "0.0.1",
   "description": "Generate a new clefs plugin",
   "homepage": "http://github.com/doug-wade/clefs",
+  "type": "module",
   "author": {
     "name": "Doug Wade",
-    "email": "doug@dougwade.io",
-    "url": "dougwade.io"
+    "email": "douglas.b.wade@gmail.com",
+    "url": "https://dougwade.io"
   },
   "files": [
     "generators"
   ],
   "main": "generators/index.js",
   "keywords": [
-    "google drive clefs plugin layer",
+    "clefs",
+    "clefs-plugin",
     "yeoman-generator"
   ],
   "dependencies": {
-    "chalk": "^2.4.1",
-    "yeoman-generator": "^3.1.1",
-    "yosay": "^2.0.2"
+    "chalk": "^5.3.0",
+    "yeoman-generator": "^5.8.0",
+    "yosay": "^3.0.0"
   },
   "devDependencies": {
-    "ava":"^6.1.1",
-    "eslint": "^5.9.0",
-    "gulp": "^3.9.0",
-    "gulp-ava": "^0.19.0",
-    "gulp-codecov": "^3.0.5",
-    "gulp-eslint": "^5.0.0",
-    "gulp-exclude-gitignore": "^1.2.0",
-    "gulp-line-ending-corrector": "^1.0.3",
-    "gulp-plumber": "^1.2.1",
-    "gulp-xo": "^0.20.0",
-    "natives": "^1.1.6",
+    "@types/inquirer": "^9.0.3",
+    "@yeoman/types": "^1.1.0",
+    "ava": "^6.1.1",
     "yeoman-assert": "^3.1.1",
-    "yeoman-test": "^1.9.1"
+    "yeoman-environment": "^3.13.0",
+    "yeoman-test": "^6.3.0"
   },
   "repository": "https://github.com/doug-wade/clefs",
   "scripts": {
     "coverage": "nyc ava",
-    "prepare": "yarn run clean && yarn run build && yarn run test",
     "test": "ava --no-worker-threads",
     "clean": "del-cli *.log",
     "lint": "xo"
