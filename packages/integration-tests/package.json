@@ -5,7 +5,7 @@
   "description": "integration tests for clefs",
   "main": "index.js",
   "scripts": {
-    "clean": "del-cli npm-debug.log*",
+    "clean": "del-cli *.log",
     "test": "ava test.js",
     "nuke": "del-cli node_modules"
   },

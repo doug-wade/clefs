@@ -6,12 +6,12 @@ const yosay = require('yosay');
 
 module.exports = class ClefsGenerator extends Generator {
 	prompting() {
-		let _this = this;
+		const _this = this;
 		_this.log(yosay(
 			'Welcome to the shining ' + chalk.green('clefs plugin') + ' generator!'
 		));
 
-		let prompts = [{
+		const prompts = [{
 			type: 'input',
 			name: 'name',
 			message: 'What would you like to call your plugin?',
@@ -27,9 +27,9 @@ module.exports = class ClefsGenerator extends Generator {
 	}
 
 	writing() {
-		let _this = this;
+		const _this = this;
 
-		let files = [
+		const files = [
 			'src/index.js',
 			'.babelrc',
 			'.gitignore',

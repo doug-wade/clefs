@@ -2,7 +2,7 @@ const fs = {};
 
 module.exports = {
 	writeFile(file, data) {
-		return new Promise((resolve) => {
+		return new Promise(resolve => {
 			fs[file] = data;
 			resolve();
 		});
