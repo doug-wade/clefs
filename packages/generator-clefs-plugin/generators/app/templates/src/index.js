@@ -1,6 +1,6 @@
 const fs = {};
 
-module.exports = {
+const plugin = {
 	writeFile(file, data) {
 		return new Promise(resolve => {
 			fs[file] = data;
@@ -18,3 +18,5 @@ module.exports = {
 	},
 	name: '<%= name %>',
 };
+
+export default plugin;

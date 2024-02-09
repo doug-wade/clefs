@@ -5,44 +5,42 @@ import yosay from 'yosay';
 
 export default class ClefsGenerator extends Generator {
 	prompting() {
-		const _this = this;
-		_this.log(yosay(
-			'Welcome to the ' + chalk.green('clefs plugin') + ' generator!'
+		this.log(yosay(
+			'Welcome to the ' + chalk.green('clefs plugin') + ' generator!',
 		));
 
 		const prompts = [{
 			type: 'input',
 			name: 'name',
 			message: 'What would you like to call your plugin?',
-			default: this.appname
+			default: this.appname,
 		}];
 
-		return _this.prompt(prompts).then(props => {
-			if (props.name.startsWith('clefs-')) {
-				props.name = props.name.replace('clefs-', '');
+		return this.prompt(prompts).then(properties => {
+			if (properties.name.startsWith('clefs-')) {
+				properties.name = properties.name.replace('clefs-', '');
 			}
-			_this.props = props;
+
+			this.props = properties;
 		});
 	}
 
 	writing() {
-		const _this = this;
-
 		const files = [
 			'src/index.js',
 			'.babelrc',
 			'.gitignore',
 			'.npmignore',
 			'package.json',
-			'README.md'
+			'README.md',
 		];
 
-		files.forEach(filename => {
-			_this.fs.copyTpl(
-				_this.templatePath(filename),
-				_this.destinationPath(path.join('packages', 'clefs-' + _this.props.name, filename)),
-				_this.props
+		for (const filename of files) {
+			this.fs.copyTpl(
+				this.templatePath(filename),
+				this.destinationPath(path.join('packages', 'clefs-' + this.props.name, filename)),
+				this.props,
 			);
-		});
+		}
 	}
-};
+}
