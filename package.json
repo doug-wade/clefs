@@ -5,7 +5,8 @@
   "scripts": {
     "clean": "turbo clean",
     "test": "turbo test",
-    "build": "turbo build"
+    "build": "turbo build",
+    "lint": "turbo lint"
   },
   "repository": {
     "type": "git",

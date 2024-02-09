@@ -6,8 +6,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "del-cli *.log",
-    "test": "ava test.js",
-    "nuke": "del-cli node_modules"
+    "test": "ava test.js"
   },
   "repository": {
     "type": "git",

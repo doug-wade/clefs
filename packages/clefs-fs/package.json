@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "clean": "del-cli *.log index.js",
-    "test": "xo src/index.js",
+    "lint": "xo src/index.js",
     "build": "babel src/index.js --presets=@babel/env -o index.js",
-    "prepare": "npm run clean && npm run build"
+    "prepare": "yarn clean && yarn build"
   },
   "repository": {
     "type": "git",

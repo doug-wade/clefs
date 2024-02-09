@@ -40,9 +40,9 @@
   "scripts": {
     "coverage": "nyc ava",
     "prepare": "yarn run clean && yarn run build && yarn run test",
-    "test": "xo && ava --no-worker-threads",
+    "test": "ava --no-worker-threads",
     "clean": "del-cli *.log",
-    "build": "echo \"yeoman generator isn't built\""
+    "lint": "xo"
   },
   "license": "MIT"
 }

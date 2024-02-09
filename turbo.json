@@ -26,6 +26,9 @@
         "clean": {
             "outputs": []
         },
+        "lint": {
+            "outputs": []
+        },
         "test": {
             "dependsOn": ["build", "^test"]
         }

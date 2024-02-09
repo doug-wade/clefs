@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "build": "mkdir -p dist && cp static/index.html dist && webpack",
-    "start": "node --harmony index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

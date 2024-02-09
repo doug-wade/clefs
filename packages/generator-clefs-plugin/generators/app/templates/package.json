@@ -7,8 +7,7 @@
     "clean": "del-cli *.log index.js",
     "test": "xo src/index.js",
     "build": "babel src/index.js --presets=@babel/env -o index.js",
-    "prepublish": "npm run clean && npm run build",
-    "nuke": "del-cli node_modules"
+    "prepublish": "yarn run clean && yarn run build"
   },
   "repository": {
     "type": "git",
