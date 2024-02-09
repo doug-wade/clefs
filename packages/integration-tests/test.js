@@ -37,6 +37,16 @@ layers.forEach(layer => {
 
 		t.deepEqual(actual, expected);
 	});
+
+	test(`Accesses files with the ${layer.name} layer`, async t => {
+		const testPath = path.join(os.tmpdir(), 'tmp.md');
+		const fs = clefs([new ClefsSimpleObject()]);
+
+		await fs.writeFile(testPath, '# Hello World');
+		await fs.access(testPath);
+
+		t.pass();
+	});
 })
 
 test("Reads and writes files with all layers", async t => {

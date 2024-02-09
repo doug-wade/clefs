@@ -16,6 +16,15 @@ const plugin = {
 			}
 		});
 	},
+	access(file) {
+		return new Promise((resolve, reject) => {
+			if (fs[file]) {
+				resolve();
+			} else {
+				reject(new Error(`file not found ${file}`));
+			}
+		});
+	},
 	name: '<%= name %>',
 };
 
