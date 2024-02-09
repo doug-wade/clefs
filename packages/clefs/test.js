@@ -1,5 +1,6 @@
 import test from 'ava';
+import clefs from './src/index.js';
 
-test(t => {
-	t.pass();
+test('returns a proxy', t => {
+	t.assert(typeof clefs([]) === 'object');
 });

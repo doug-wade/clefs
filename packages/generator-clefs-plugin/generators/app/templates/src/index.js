@@ -1,8 +1,8 @@
 const fs = {};
 
-module.exports = {
+const plugin = {
 	writeFile(file, data) {
-		return new Promise((resolve) => {
+		return new Promise(resolve => {
 			fs[file] = data;
 			resolve();
 		});
@@ -16,5 +16,7 @@ module.exports = {
 			}
 		});
 	},
-	name: '<%= name %>'
+	name: '<%= name %>',
 };
+
+export default plugin;
