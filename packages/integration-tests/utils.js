@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import del from 'del';
+import {deleteAsync} from 'del';
 
 // Testing utilities
 export function createTmpDir() {
@@ -27,7 +27,7 @@ export function cleanupTmpDir(dir) {
 	}
 	const promises = [];
 	directories.forEach(directory => {
-		promises.push(del(directory, {force: true}));
+		promises.push(deleteAsync(directory, {force: true}));
 	});
 	return Promise.all(promises);
 }
