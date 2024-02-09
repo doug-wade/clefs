@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "description": "clefs test pages",
   "main": "index.js",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "mkdir -p dist && cp static/index.html dist && webpack",
-    "start": "node --harmony index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,10 @@
     "koa-static": "^5.0.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-dropzone": "^7.0.1"
+    "react-dropzone": "^7.0.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.23.3"
   }
 }

@@ -4,11 +4,10 @@
   "description": "An fs layer backed by <%= name %>",
   "main": "index.js",
   "scripts": {
-    "clean": "del-cli npm-debug.log* index.js",
-    "test": "xo src/index.js && snyk test",
-    "compile": "babel src/index.js --presets es2015,stage-0 -o index.js",
-    "prepublish": "npm run clean && npm run compile",
-    "nuke": "del-cli node_modules"
+    "clean": "del-cli *.log index.js",
+    "test": "xo src/index.js",
+    "build": "babel src/index.js --presets=@babel/env -o index.js",
+    "prepublish": "yarn run clean && yarn run build"
   },
   "repository": {
     "type": "git",
@@ -25,12 +24,11 @@
   },
   "homepage": "https://github.com/doug-wade/clefs#readme",
   "devDependencies": {
-    "ava": "^0.15.2",
-    "babel-cli": "^6.9.0",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-stage-0": "^6.5.0",
-    "del-cli": "^0.2.0",
-    "snyk": "^1.14.3",
-    "xo": "^0.15.1"
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "ava": "^6.1.1",
+    "del-cli": "^5.1.0",
+    "xo": "^0.57.0"
   }
 }

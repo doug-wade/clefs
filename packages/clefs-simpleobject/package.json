@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "description": "An fs abstraction backed by an object",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "clean": "del-cli npm-debug.log* index.js",
-    "test": "xo src/index.js && snyk test",
-    "compile": "babel src/index.js --presets es2015,stage-0 -o index.js",
-    "prepare": "mkdir -p node_modules && npm run clean && npm run compile",
-    "nuke": "del-cli node_modules"
+    "clean": "del-cli *.log index.js",
+    "lint": "xo src/index.js",
+    "build": "babel src/index.js -o index.js",
+    "prepare": "yarn clean && yarn build"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,8 @@
+{
+    "targets": {
+        "browsers": "> 0.25%, not dead",
+        "esmodules": true,
+        "node": "current"
+    },
+    "presets": ["@babel/preset-env"]
+}
