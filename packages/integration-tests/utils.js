@@ -4,34 +4,51 @@ import path from 'node:path';
 import {deleteAsync} from 'del';
 
 // Testing utilities
-export function createTmpDir() {
+export function createTemporaryDirectory() {
 	const randomId = generateRandomId();
 
 	return new Promise((resolve, reject) => {
-		const tmpPath = path.join(os.tmpdir(), 'clefs-fixture-' + randomId);
-		fs.mkdir(tmpPath, (err) => {
-			if (err) {
-				reject(err);
+		const temporaryPath = path.join(os.tmpdir(), 'clefs-fixture-' + randomId);
+		fs.mkdir(temporaryPath, error => {
+			if (error) {
+				reject(error);
 			} else {
-				resolve(tmpPath);
+				resolve(temporaryPath);
 			}
 		});
 	});
 }
 
-export function cleanupTmpDir(dir) {
+export function cleanupTemporaryDirectory(directory) {
 	// In case the cleanup regex matches more than one directory, clean up arrays.
 	let directories = [];
-	if (typeof dir === 'string') {
-		directories = [dir];
+	if (typeof directory === 'string') {
+		directories = [directory];
 	}
-	const promises = [];
-	directories.forEach(directory => {
-		promises.push(deleteAsync(directory, {force: true}));
-	});
-	return Promise.all(promises);
+
+	return Promise.all(directories.map(
+		directory => deleteAsync(directory, {force: true}),
+	));
 }
 
 export function generateRandomId() {
-	return (Math.floor(Math.random() * 9999999) + 1000000).toString();
+	return (Math.floor(Math.random() * 9_999_999) + 1_000_000).toString();
+}
+
+export class FailingPlugin {
+	constructor() {
+		this.name = 'failing';
+	}
+
+	readFile() {
+		return Promise.reject(new Error('readFile failed'));
+	}
+
+	writeFile() {
+		return Promise.reject(new Error('writeFile failed'));
+	}
+
+	access() {
+		return Promise.reject(new Error('access failed'));
+	}
 }
