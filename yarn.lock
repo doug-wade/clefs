@@ -1960,10 +1960,10 @@
   resolved "https://registry.yarnpkg.com/@yeoman/namespace/-/namespace-1.0.0.tgz#63334dec3aac51d8a39b8dd858b95149e87a1d9c"
   integrity sha512-+HcGOOoLSP3+Hb3xA3TpYDiSsmok/boJtbd4bhNfKGDp9/bXkSBpK0Bqmydl0ulo4rUGwiY95eVtP2sLpoDGlA==
 
-"@yeoman/types@^1.1.0":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@yeoman/types/-/types-1.1.2.tgz#8128972e5a4117344acf6d5508f180a38a6d46e4"
-  integrity sha512-/hg8AIU0ZLijHfZWi0vFgWPVWvUJs/tlKeia7Z5sKsWYGCcqsPSHZcnov5bZlpxv8v+vPQ8K9VtTKORtVALsJw==
+"@yeoman/types@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@yeoman/types/-/types-1.2.0.tgz#acc24366dfb7202618ff024165cf5f6360196128"
+  integrity sha512-Ofaig2hSrauCZ5ZTn9paWtgeG1vJseVsrzToIo/ub3bnm4IDwNf/cQv1/qkvhYSns+xnq7CR5u8kr1fFcMcKfQ==
   dependencies:
     "@types/node" "^16.18.26"
 
